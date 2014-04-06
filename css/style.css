@@ -1,0 +1,367 @@
+a {
+	text-decoration: none;
+	color: inherit;
+	-webkit-touch-callout: none; /* Disable touch and hold highlighting on ios - useful for when we move into phonegap */
+}
+
+fieldset {
+	padding: 0;
+	margin: 0;
+}
+
+legend {
+	padding-bottom: 15px;
+}
+
+form > input {
+	width: 100%;
+}
+
+fieldset {
+	border: none;
+}
+
+hr {
+	margin: 10px 0;
+}
+
+/* Icons */
+.next {
+	background: transparent url(../libs/topcoat-icons/svg/next.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	right: 12px;
+	top: 22px;
+	height: 50px;
+	width: 28px;
+}
+
+.icon-back {
+	background: url("../libs/topcoat-icons/svg/back.svg") no-repeat;
+	background-size: cover;
+}
+
+.icon-search {
+	background: url("../libs/topcoat-icons/svg/search.svg") no-repeat;
+	background-size: cover;
+}
+
+/* Home search */
+.search {
+	list-style: none;
+	padding: 0;
+}
+
+.search > li {
+	padding-bottom: 2em;
+}
+
+.search label {
+	display: block;
+	padding-bottom: 2em;
+}
+
+.block {
+	display: block;
+	width: 100%;
+}
+
+.home {
+	padding: 10px;
+}
+
+.description {
+	clear: both;
+	text-align: left;
+}
+
+.pull-left {
+	float: left;
+}
+
+.bedrooms {
+	text-align: right;
+}
+
+/* List view */
+.scroller {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	position: absolute;
+	top: 70px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.list {
+	list-style-type: none;
+}
+
+.list > li {
+	position: relative;
+	clear: both;
+	padding: 0 35px 0 0;
+	margin: 0;
+}
+
+.list > li:nth-of-type(1) {
+	border-top: none;
+}
+
+.list > li > label {
+	margin: 15px 5px 0px 12px;
+}
+
+.list > li > a {
+	margin: 0px;
+	display: inline-block;
+	height: 57px;
+	padding: 10px;
+}
+
+.list > li > a > p:nth-of-type(1) {
+	margin: 8px 0px 0px 0px;
+	width: 80%;
+	display: inline;
+}
+
+.list > li p:nth-of-type(2) {
+	margin: 0px;
+	color: #777;
+	display: block;
+}
+
+.list > li img {
+	width: 57px;
+	height: 57px;
+	float: left;
+	margin: 0 5px;
+}
+
+.list li:active {
+	background-color: #d6d6d6;
+}
+
+/* Property view */
+.main {
+	text-align: center;
+}
+
+.property-header {
+	background: #39aa35;
+	color: #fff;
+	padding: 1em;
+	text-align: right;
+}
+
+.property-header img {
+	border: 5px solid #fff;
+	margin-bottom: 1em;
+}
+
+.property-header h2,
+.property-header h5 {
+	margin: 0px;
+}
+
+.property-content {
+	padding: 0 1em 1em 1em;
+}
+
+.large-image {
+	border: 3px solid #fff;
+	max-width: 100%;
+	height: auto;
+}
+
+.circle {
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
+	height: 80px;
+	width: 80px;
+}
+
+.circle-large {
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
+	height: 120px;
+	width: 120px;
+}
+
+.info {
+	color: #288edf;
+}
+
+.topcoat-navigation-bar .topcoat-icon-button--quiet {
+	margin-top: 0.65em;
+}
+
+/* Page slide transitions */
+.slide-left.ng-enter,
+.slide-left.ng-leave,
+.slide-right.ng-enter,
+.slide-right.ng-leave {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	-webkit-transition: -webkit-transform .3s ease-in-out;
+	   -moz-transition: -moz-transform .3s ease-in-out;
+	     -o-transition: -o-transform .3s ease-in-out;
+	        transition: transform .3s ease-in-out;
+}
+
+.slide-left.ng-enter {
+	z-index: 101;
+	-webkit-transform: translateX(100%);
+	   -moz-transform: translateX(100%);
+	    -ms-transform: translateX(100%);
+	     -o-transform: translateX(100%);
+	        transform: translateX(100%);
+}
+
+.slide-left.ng-enter.ng-enter-active {
+	-webkit-transform: translateX(0);
+	   -moz-transform: translateX(0);
+	    -ms-transform: translateX(0);
+	     -o-transform: translateX(0);
+	        transform: translateX(0);
+}
+.slide-left.ng-leave {
+	z-index: 100;
+	-webkit-transform: translateX(0);
+	   -moz-transform: translateX(0);
+	    -ms-transform: translateX(0);
+	     -o-transform: translateX(0);
+	        transform: translateX(0);
+}
+
+.slide-left.ng-leave.ng-leave-active {
+	-webkit-transform: translateX(-100%);
+	   -moz-transform: translateX(-100%);
+	    -ms-transform: translateX(-100%);
+	     -o-transform: translateX(-100%);
+	        transform: translateX(-100%);
+}
+
+.slide-right.ng-enter {
+	z-index: 100;
+	-webkit-transform: translateX(-100%);
+	   -moz-transform: translateX(-100%);
+	    -ms-transform: translateX(-100%);
+	     -o-transform: translateX(-100%);
+	        transform: translateX(-100%);
+}
+
+.slide-right.ng-enter.ng-enter-active {
+	-webkit-transform: translateX(0);
+	   -moz-transform: translateX(0);
+	    -ms-transform: translateX(0);
+	     -o-transform: translateX(0);
+	        transform: translateX(0);
+}
+
+.slide-right.ng-leave {
+	z-index: 101;
+	-webkit-transform: translateX(0);
+	   -moz-transform: translateX(0);
+	    -ms-transform: translateX(0);
+	     -o-transform: translateX(0);
+	        transform: translateX(0);
+}
+
+.slide-right.ng-leave.ng-leave-active {
+	-webkit-transform: translateX(100%);
+	   -moz-transform: translateX(100%);
+	    -ms-transform: translateX(100%);
+	     -o-transform: translateX(100%);
+	        transform: translateX(100%);
+}
+
+/* Loading spinner */
+.placeholder {
+	background-color: #F0F0F0;
+	padding: 10px 0 30px;
+}
+
+.spinner {
+	margin: auto;
+
+	height: 18px;
+	/* width needs to be double the height */
+	width: 36px;
+	border: 3px solid #1E8CE2;
+	border-bottom: 0;
+	border-radius: 40px 40px 0 0;
+
+	-webkit-transform-origin: bottom center;
+	   -moz-transform-origin: bottom center;
+	    -ms-transform-origin: bottom center;
+	     -o-transform-origin: bottom center;
+	        transform-origin: bottom center;
+
+	-webkit-animation: spinner .4s infinite linear;
+	   -moz-animation: spinner .4s infinite linear;
+	    -ms-animation: spinner .4s infinite linear;
+	     -o-animation: spinner .4s infinite linear;
+	        animation: spinner .4s infinite linear;
+}
+
+@-webkit-keyframes spinner {
+	0% {-webkit-transform: rotate(0deg);}
+	50% {-webkit-transform: rotate(180deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spinner {
+	0% {-moz-transform: rotate(0deg);}
+	50% {-moz-transform: rotate(180deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+
+@-ms-keyframes spinner {
+	0% {-ms-transform: rotate(0deg);}
+	50% {-ms-transform: rotate(180deg);}
+	100% {-ms-transform: rotate(360deg);}
+}
+
+@-o-keyframes spinner {
+	0% {-o-transform: rotate(0deg);}
+	50% {-o-transform: rotate(180deg);}
+	100% {-o-transform: rotate(360deg);}
+}
+
+@keyframes spinner {
+	0% {transform: rotate(0deg);}
+	50% {transform: rotate(180deg);}
+	100% {transform: rotate(360deg);}
+}
+
+/* Container for loading spinner */
+.show-when-loaded {
+    position: relative;
+    height: 60px;
+    top: 0;
+    opacity:1;
+
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+       -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+        -ms-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+         -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+            transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.show-when-loaded.ng-hide {
+	opacity:0;
+}
+
+.show-when-loaded.ng-hide-add, .show-when-loaded.ng-hide-remove {
+	display:block!important;
+}
+
+/* Fix for topcoat list items not always showing after back transition */
+ul.topcoat-list {
+  overflow: visible !important;
+}

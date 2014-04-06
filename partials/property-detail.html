@@ -1,0 +1,35 @@
+    <div class="topcoat-navigation-bar">
+        <div class="topcoat-navigation-bar__item left quarter">
+            <a id="slide-menu-button" class="topcoat-icon-button--quiet slide-menu-button">
+                <div back-button></div>
+            </a>
+        </div>
+        <div class="topcoat-navigation-bar__item center half">
+            <h1 class="topcoat-navigation-bar__title">Details</h1>
+        </div>
+        <div class="topcoat-navigation-bar__item right quarter">
+            <div search-button></div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div ng-show="!property" class="show-when-loaded">
+            <div class="placeholder">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        
+        <div class="property-header" ng-show="property">
+            <img ng-src="{{property.image_url}}" alt="Property" class="large-image pull-left circle-large"/>
+            <h2>{{property.price | currency:"£ "}}</h2>
+            <h5>For {{property.listing_status}} : {{property.displayable_address}}, {{property.county}}</h5>
+        </div>
+
+        <div class="property-content" ng-show="property">
+            <p class="bedrooms">{{property.num_bedrooms}} Bedrooms</p>
+            <p class="description">{{property.short_description}}</p>
+            <a class="topcoat-button--cta" href="tel:{{property.agent_phone | telLink}}">Call {{property.agent_name}}</a>
+            <p><a href="http://www.zoopla.co.uk/"><img src="http://www.zoopla.co.uk/static/images/mashery/powered-by-zoopla.png" width="111" height="54" title="Property information powered by Zoopla" alt="Property information powered by Zoopla" border="0"&gt;</a></p>
+        </div>
+    </div>

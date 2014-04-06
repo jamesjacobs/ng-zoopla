@@ -1,0 +1,17 @@
+{
+  "name": "ng-zoopla",
+  "version": "0.1",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "angular-animate": "latest",
+    "angularjs-truncate": "latest",
+    "topcoat": "latest",
+    "topcoat-icons": "latest"
+  }
+}

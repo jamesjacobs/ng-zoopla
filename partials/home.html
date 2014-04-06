@@ -1,0 +1,40 @@
+    <div class="topcoat-navigation-bar">
+        <div class="topcoat-navigation-bar__item center full">
+            <h1 class="topcoat-navigation-bar__title">Zoopla Property Finder</h1>
+        </div>
+    </div>
+
+    <div class="main home">
+
+        <form ng-submit="searchForm()">
+            <fieldset>
+
+                <legend>Search by postcode</legend>
+
+                <ul class="search">
+                    <li>
+                        <input type="text" class="topcoat-text-input block" placeholder="Postcode" value="{{ postcode }}" ng-model="postcode" required>
+                    </li>
+                    <li>
+                        <label for="radius">Radius from postcode - {{radius || 1}} miles</label>
+                        <input type="range" class="topcoat-range" id="radius" min="1" max="50" value="{{radius || 1}}" ng-model="radius" required>
+                    </li>
+                    <li>
+                        <label for="beds">Minimum beds - {{minBeds || 1}}</label>
+                        <input type="range" class="topcoat-range" id="beds" min="1" max="5" value="{{minBeds || 1}}" ng-model="minBeds" required>
+                    </li>
+                    <li>
+                        <label for="price">Minimum price - &pound;{{minPrice || 50000}}</label>
+                        <input type="range" class="topcoat-range" id="price" min="50000" max="500000" step="10000" value="{{minPrice || 50000}}" ng-model="minPrice" required>
+                    </li>
+                    <li>
+                        <label for="price">Maximum price - &pound;{{maxPrice || 100000}}</label>
+                        <input type="range" class="topcoat-range" id="price" min="50000" max="500000" step="10000" value="{{maxPrice || 50000}}" ng-model="maxPrice" required>
+                    </li>
+                </ul>
+
+                <button type="submit" class="topcoat-button--cta block">Search</button>
+                
+            </fieldset>
+        </form>
+    </div>
